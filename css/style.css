@@ -422,6 +422,18 @@ body {
 }
 
 .hero-bg { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.hero-photo {
+  position: absolute; inset: 0;
+  background-image: url('../images/sunset.jpg');
+  background-size: cover;
+  background-position: center 55%;
+  opacity: 0;
+  animation: orb-in 1.8s var(--ease-out) 0.1s both;
+}
+.hero-photo::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(9,9,31,0.86);
+}
 .orb {
   position: absolute;
   border-radius: 50%;
@@ -685,19 +697,37 @@ body {
   position: relative; overflow: hidden;
   transition: transform 0.3s var(--ease-out), box-shadow 0.3s, border-color 0.3s;
 }
+.work-card { --card-color: var(--indigo); }
 .work-card::before {
   content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg,transparent 0%,rgba(99,102,241,0.04) 60%,rgba(99,102,241,0.08) 100%);
+  background: radial-gradient(ellipse 80% 60% at 10% 100%,
+    color-mix(in srgb, var(--card-color) 10%, transparent), transparent 70%);
   opacity: 0; transition: opacity 0.35s; pointer-events: none;
 }
-.work-card:hover { transform: translateY(-5px); border-color: var(--border-mid); box-shadow: 0 20px 56px rgba(0,0,0,0.4); }
+.work-card::after {
+  content: ''; position: absolute; inset: 0;
+  border-radius: inherit; padding: 1px;
+  background: linear-gradient(135deg, var(--card-color), transparent 60%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0; transition: opacity 0.3s; pointer-events: none;
+}
+.work-card:hover {
+  transform: translateY(-5px); border-color: transparent;
+  box-shadow: 0 20px 56px rgba(0,0,0,0.4);
+}
 .work-card:hover::before { opacity: 1; }
+.work-card:hover::after  { opacity: 1; }
 .work-card__icon {
   font-size: 40px; color: var(--indigo-light);
   --ph-duotone-opacity: 0.22; line-height: 1; margin-bottom: 4px;
   transition: filter 0.3s, color 0.3s;
 }
-.work-card:hover .work-card__icon { color: var(--ember); filter: drop-shadow(0 0 12px rgba(245,158,11,0.4)); }
+.work-card:hover .work-card__icon {
+  color: var(--card-color);
+  filter: drop-shadow(0 0 10px color-mix(in srgb, var(--card-color) 60%, transparent));
+}
 .work-card__eyebrow {
   font-family: 'Geist Mono', monospace;
   font-size: 10px; font-weight: 500; letter-spacing: 0.18em;
@@ -711,7 +741,7 @@ body {
   margin-top: 8px; transition: color 0.2s, gap 0.2s;
 }
 .work-card__link i { font-size: 14px; }
-.work-card:hover .work-card__link { color: var(--ember); gap: 10px; }
+.work-card:hover .work-card__link { color: var(--card-color); gap: 10px; }
 
 /* ── About ─────────────────────────────────────────────────────────────────── */
 .about {
@@ -746,6 +776,27 @@ body {
   transition: border-color 0.2s, color 0.2s;
 }
 .area-tag:hover { border-color: rgba(99,102,241,0.4); color: var(--text); }
+.about__portrait {
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 32px;
+  aspect-ratio: 4 / 3;
+  position: relative;
+  border: 1px solid var(--border);
+}
+.about__portrait-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  filter: saturate(0.88);
+  transition: filter 0.4s;
+}
+.about__portrait:hover .about__portrait-img { filter: saturate(1); }
+.about__portrait::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 55%, rgba(15,18,56,0.35) 100%);
+  pointer-events: none;
+}
 .about__local-note {
   font-family: 'Geist Mono', monospace;
   font-size: 11px; color: var(--text-faint); letter-spacing: 0.06em; line-height: 1.6;
@@ -753,6 +804,23 @@ body {
 
 /* ── Contact ───────────────────────────────────────────────────────────────── */
 .contact { padding: clamp(80px,10vh,140px) 0; }
+.contact-rule {
+  height: 1px;
+  background: var(--ember);
+  box-shadow: 0 0 10px rgba(245,158,11,0.5);
+  margin: 28px 0 44px;
+  width: 0;
+  opacity: 0;
+  transform: none;
+  transition:
+    width 0.9s var(--ease-out) 0.15s,
+    opacity 0.5s var(--ease-out);
+}
+.contact-rule.reveal-up.visible {
+  width: 100%;
+  opacity: 1;
+  transform: none;
+}
 .contact__header { margin-bottom: 56px; }
 .contact__layout { display: grid; grid-template-columns: 1fr 340px; gap: 60px; align-items: start; }
 .contact__form { display: flex; flex-direction: column; gap: 20px; }
@@ -912,6 +980,14 @@ body {
 }
 .portfolio-card.reveal-up.visible { transform: translateY(0); }
 
+.work-card.reveal-up {
+  transform: translateY(32px) scale(0.97);
+  transition:
+    opacity 0.7s var(--ease-out) var(--delay, 0ms),
+    transform 0.7s var(--ease-out) var(--delay, 0ms);
+}
+.work-card.reveal-up.visible { transform: translateY(0) scale(1); }
+
 /* ── Section title clip reveal ─────────────────────────────────────────────── */
 .title-reveal { overflow: hidden; }
 .title-reveal .section-title {
@@ -975,17 +1051,22 @@ body {
 }
 .portfolio-card__overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(9,9,31,0.75) 0%, transparent 55%);
+  background: rgba(9,9,31,0.5);
   opacity: 0;
-  display: flex; align-items: flex-end; padding: 20px;
+  display: flex; align-items: center; justify-content: center;
   transition: opacity 0.3s;
 }
 .portfolio-card:hover .portfolio-card__overlay { opacity: 1; }
 .portfolio-card__cta {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 13px; font-weight: 700; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  backdrop-filter: blur(8px);
+  font-size: 26px; color: #fff;
+  transition: background 0.2s, transform 0.2s;
 }
-.portfolio-card__cta i { font-size: 14px; }
+.portfolio-card:hover .portfolio-card__cta { transform: scale(1.08); background: rgba(255,255,255,0.2); }
 .portfolio-card__meta {
   padding: 20px 22px 24px;
   display: flex; flex-direction: column; gap: 5px;
@@ -1006,6 +1087,82 @@ body {
 }
 .portfolio-card__desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
+/* ── Accent inline span ────────────────────────────────────────────────────── */
+.accent { color: var(--ember); font-style: normal; }
+[data-theme="a"] .section-title .accent { font-style: italic; }
+
+/* ── About quote ───────────────────────────────────────────────────────────── */
+.about__quote {
+  font-size: clamp(17px, 2vw, 26px);
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  border: none;
+  margin: 24px 0 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(245,158,11,0.3);
+}
+[data-theme="a"] .about__quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: clamp(18px, 2.2vw, 30px);
+}
+
+/* ── Lightbox ─────────────────────────────────────────────────────────────── */
+.lightbox {
+  position: fixed; inset: 0; z-index: 9000;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s var(--ease-out);
+}
+.lightbox.open { opacity: 1; pointer-events: auto; }
+.lightbox__backdrop {
+  position: absolute; inset: 0;
+  background: rgba(5,5,20,0.92);
+  backdrop-filter: blur(14px);
+  cursor: zoom-out;
+}
+.lightbox__close {
+  position: absolute; top: 20px; right: 24px; z-index: 2;
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: #fff; font-size: 20px; cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.lightbox__close:hover { background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.28); }
+.lightbox__stage {
+  position: relative; z-index: 1;
+  display: flex; align-items: center; justify-content: center;
+}
+.lightbox__img {
+  display: block;
+  max-width: 90vw; max-height: 85vh;
+  width: auto; height: auto;
+  object-fit: contain;
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  user-select: none; -webkit-user-select: none;
+  border-radius: 6px;
+  box-shadow: 0 32px 96px rgba(0,0,0,0.7);
+  cursor: zoom-in;
+}
+.lightbox__hint {
+  position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+  z-index: 2;
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+  white-space: nowrap; pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lightbox { transition: none; }
+  .lightbox__img { transition: none; }
+}
+
 /* ── Keyboard focus ────────────────────────────────────────────────────────── */
 :focus-visible { outline: 2px solid var(--indigo); outline-offset: 3px; border-radius: 4px; }
 
@@ -1024,7 +1181,9 @@ body {
   [data-theme="b"] .hero-accent::after { transform: scaleX(1); animation: none; }
   [data-theme="c"] .hero-accent { animation: none; font-variation-settings: 'wght' 800; }
   .title-reveal .section-title { transform: none; transition: none; }
-  .svc-card.reveal-up, .portfolio-card.reveal-up { transform: none; }
+  .svc-card.reveal-up, .portfolio-card.reveal-up, .work-card.reveal-up { transform: none; }
+  .hero-photo { opacity: 1; animation: none; }
+  .contact-rule { width: 100%; opacity: 1; transition: none; }
 }
 
 /* ── Responsive ────────────────────────────────────────────────────────────── */
@@ -1048,6 +1207,12 @@ body {
   .nav-links, .btn--nav-cta { display: none; }
   .nav-toggle { display: flex; }
   .br-desktop { display: none; }
+  /* Mobile hero: designed, not shrunk */
+  .hero-content { padding-top: 40px; padding-bottom: 48px; }
+  .hero-cta-group { flex-direction: column; }
+  .hero-cta-group .btn { width: 100%; justify-content: center; }
+  .scroll-hint { display: none; }
+  [data-theme="a"] .hero-rule { margin: 16px 0 16px; }
   .services-grid { grid-template-columns: 1fr; }
   .services-grid--asymmetric { grid-template-columns: 1fr; }
   .services-grid--asymmetric .svc-card:first-child,

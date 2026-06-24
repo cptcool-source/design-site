@@ -214,4 +214,69 @@
   window.addEventListener('scroll', updateActiveLink, { passive: true });
   updateActiveLink();
 
+  /* ── Lightbox ───────────────────────────────────────────────────────────── */
+  var lightbox         = document.getElementById('lightbox');
+  var lightboxImg      = document.getElementById('lightbox-img');
+  var lightboxClose    = document.getElementById('lightbox-close');
+  var lightboxBackdrop = document.getElementById('lightbox-backdrop');
+  var lbScale = 1;
+  var lbMin   = 1;
+  var lbMax   = 4;
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
+    lbScale = 1;
+    lightboxImg.style.transform = 'scale(1)';
+    lightboxImg.style.cursor = 'zoom-in';
+    lightbox.removeAttribute('inert');
+    lightbox.setAttribute('aria-hidden', 'false');
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    lightboxClose.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightbox.setAttribute('inert', '');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('[data-lightbox-src]').forEach(function (card) {
+    card.addEventListener('click', function () {
+      openLightbox(card.dataset.lightboxSrc, card.dataset.lightboxAlt || '');
+    });
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox(card.dataset.lightboxSrc, card.dataset.lightboxAlt || '');
+      }
+    });
+  });
+
+  lightboxBackdrop.addEventListener('click', closeLightbox);
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+  });
+
+  /* Scroll to zoom */
+  lightbox.addEventListener('wheel', function (e) {
+    if (!lightbox.classList.contains('open')) return;
+    e.preventDefault();
+    lbScale = Math.min(lbMax, Math.max(lbMin, lbScale + (e.deltaY < 0 ? 0.2 : -0.2)));
+    lightboxImg.style.transform = 'scale(' + lbScale + ')';
+    lightboxImg.style.cursor = lbScale > 1 ? 'zoom-out' : 'zoom-in';
+  }, { passive: false });
+
+  /* Click image to toggle zoom */
+  lightboxImg.addEventListener('click', function (e) {
+    e.stopPropagation();
+    lbScale = lbScale > 1 ? 1 : 2.5;
+    lightboxImg.style.transform = 'scale(' + lbScale + ')';
+    lightboxImg.style.cursor = lbScale > 1 ? 'zoom-out' : 'zoom-in';
+  });
+
 })();
