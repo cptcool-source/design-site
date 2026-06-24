@@ -170,17 +170,27 @@
   <div class="section-inner">
     <div class="section-header reveal-up">
       <p class="section-eyebrow">What we do</p>
-      <h2 class="section-title" id="services-title">Everything your site needs to win.</h2>
+      <div class="title-reveal">
+        <h2 class="section-title" id="services-title">Everything your site needs to win.</h2>
+      </div>
       <p class="section-sub">From first impression to first call — we handle the full stack.</p>
     </div>
-    <div class="services-grid">
+    <div class="services-grid services-grid--asymmetric">
 
-      <article class="svc-card reveal-up" style="--card-color:#6366F1;--delay:0ms">
+      <!-- Featured: Web Design — spans 2 columns -->
+      <article class="svc-card svc-card--featured reveal-up" style="--card-color:#6366F1;--delay:0ms">
         <div class="svc-card__icon-wrap">
           <i class="ph-duotone ph-layout" aria-hidden="true" style="--ph-duotone-opacity:.25"></i>
         </div>
-        <h3 class="svc-card__title">Web Design</h3>
-        <p class="svc-card__desc">Websites built specifically for your customers and your market — not recycled from a template library.</p>
+        <div class="svc-card__feature-body">
+          <h3 class="svc-card__title">Web Design</h3>
+          <p class="svc-card__desc">Every site starts with a specific point of view about your customers, your market, and what makes your business worth choosing. No templates. No recycled layouts. A design that could only be yours.</p>
+          <ul class="svc-card__list">
+            <li>Custom direction for every client</li>
+            <li>Mobile-first from the first screen</li>
+            <li>Built to turn visitors into contacts</li>
+          </ul>
+        </div>
       </article>
 
       <article class="svc-card reveal-up" style="--card-color:#818CF8;--delay:80ms">
@@ -188,10 +198,10 @@
           <i class="ph-duotone ph-code" aria-hidden="true" style="--ph-duotone-opacity:.25"></i>
         </div>
         <h3 class="svc-card__title">Web Development</h3>
-        <p class="svc-card__desc">Fast, secure, mobile-first code built from scratch to your specs — with speed scores that matter for SEO.</p>
+        <p class="svc-card__desc">Fast, secure, mobile-first code built from scratch — with speed scores that actually move the needle for SEO.</p>
       </article>
 
-      <article class="svc-card reveal-up" style="--card-color:#F59E0B;--delay:160ms">
+      <article class="svc-card reveal-up" style="--card-color:#F59E0B;--delay:0ms">
         <div class="svc-card__icon-wrap">
           <i class="ph-duotone ph-trend-up" aria-hidden="true" style="--ph-duotone-opacity:.25"></i>
         </div>
@@ -199,7 +209,7 @@
         <p class="svc-card__desc">Show up first when customers in North Port and Southwest Florida search for your service — before your competition does.</p>
       </article>
 
-      <article class="svc-card reveal-up" style="--card-color:#34D399;--delay:0ms">
+      <article class="svc-card reveal-up" style="--card-color:#34D399;--delay:80ms">
         <div class="svc-card__icon-wrap">
           <i class="ph-duotone ph-map-pin" aria-hidden="true" style="--ph-duotone-opacity:.25"></i>
         </div>
@@ -207,20 +217,23 @@
         <p class="svc-card__desc">We set up and optimize your listing so customers find you on Maps, read your reviews, and call directly from search.</p>
       </article>
 
-      <article class="svc-card reveal-up" style="--card-color:#F472B6;--delay:80ms">
+      <article class="svc-card reveal-up" style="--card-color:#F472B6;--delay:160ms">
         <div class="svc-card__icon-wrap">
           <i class="ph-duotone ph-share-network" aria-hidden="true" style="--ph-duotone-opacity:.25"></i>
         </div>
         <h3 class="svc-card__title">Social Media Setup</h3>
-        <p class="svc-card__desc">Professional profiles that match your website and reinforce your brand across every platform your customers use.</p>
+        <p class="svc-card__desc">Professional profiles that match your site and reinforce your brand across every platform your customers actually use.</p>
       </article>
 
-      <article class="svc-card reveal-up" style="--card-color:#6366F1;--delay:160ms">
+      <!-- Wide: Maintenance — spans full width -->
+      <article class="svc-card svc-card--wide reveal-up" style="--card-color:#6366F1;--delay:200ms">
         <div class="svc-card__icon-wrap">
           <i class="ph-duotone ph-shield-check" aria-hidden="true" style="--ph-duotone-opacity:.25"></i>
         </div>
-        <h3 class="svc-card__title">Website Maintenance</h3>
-        <p class="svc-card__desc">Monthly backups, updates, and security monitoring so your site never becomes a liability while you run your business.</p>
+        <div>
+          <h3 class="svc-card__title">Website Maintenance</h3>
+          <p class="svc-card__desc">Monthly backups, updates, and security monitoring so your site never becomes a liability while you're focused on running your business. One less thing to think about.</p>
+        </div>
       </article>
 
     </div>
@@ -232,7 +245,9 @@
   <div class="section-inner">
     <div class="section-header reveal-up">
       <p class="section-eyebrow">How it works</p>
-      <h2 class="section-title" id="process-title">Simple from start to launch.</h2>
+      <div class="title-reveal">
+        <h2 class="section-title" id="process-title">Simple from start to launch.</h2>
+      </div>
       <p class="section-sub">Four steps. No jargon, no surprises.</p>
     </div>
     <div class="process__wrap" id="process-wrap">
@@ -282,7 +297,9 @@
   <div class="section-inner">
     <div class="section-header reveal-up">
       <p class="section-eyebrow">Who we serve</p>
-      <h2 class="section-title" id="work-title">Built for the businesses that keep Southwest Florida running.</h2>
+      <div class="title-reveal">
+        <h2 class="section-title" id="work-title">Built for the businesses that keep Southwest Florida running.</h2>
+      </div>
     </div>
     <div class="work-grid">
 
@@ -315,6 +332,59 @@
         <p class="work-card__desc">Clean, credentialed web presence for chiropractors, wellness providers, real estate agents, and attorneys who can't afford to look amateur online.</p>
         <a href="#contact" class="work-card__link">Start a project <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       </div>
+
+    </div>
+
+    <!-- ── Selected Work ─────────────────────────────────────────────────────── -->
+    <div class="portfolio-divider reveal-up">
+      <span class="portfolio-divider__rule" aria-hidden="true"></span>
+      <span class="portfolio-divider__label">Selected work</span>
+      <span class="portfolio-divider__rule" aria-hidden="true"></span>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <a class="portfolio-card reveal-up" href="https://mambatechsolutions.com" target="_blank" rel="noopener noreferrer" style="--delay:0ms">
+        <div class="portfolio-card__img-wrap">
+          <img src="images/mamba-tech.png" alt="Mamba Tech Solutions — Microsoft Teams phone infrastructure for trade businesses" class="portfolio-card__img" loading="lazy">
+          <div class="portfolio-card__overlay">
+            <span class="portfolio-card__cta">View live site <i class="ph ph-arrow-up-right" aria-hidden="true"></i></span>
+          </div>
+        </div>
+        <div class="portfolio-card__meta">
+          <span class="portfolio-card__tag">B2B · Telecom · Conversion</span>
+          <h3 class="portfolio-card__title">Mamba Tech Solutions</h3>
+          <p class="portfolio-card__desc">Communications infrastructure for home service businesses. Clean, conversion-focused, with a live dispatch board in the hero.</p>
+        </div>
+      </a>
+
+      <a class="portfolio-card reveal-up" href="#" target="_blank" rel="noopener noreferrer" style="--delay:130ms">
+        <div class="portfolio-card__img-wrap">
+          <img src="images/family-hub-home.png" alt="Family Hub — dark themed private family app with circuit animation" class="portfolio-card__img" loading="lazy">
+          <div class="portfolio-card__overlay">
+            <span class="portfolio-card__cta">View project <i class="ph ph-arrow-up-right" aria-hidden="true"></i></span>
+          </div>
+        </div>
+        <div class="portfolio-card__meta">
+          <span class="portfolio-card__tag">Web App · Dark UI · Immersive</span>
+          <h3 class="portfolio-card__title">Family Hub</h3>
+          <p class="portfolio-card__desc">A private family command center — chores, shared calendar, memories, and an AI study tutor. Dark, immersive UI with circuit trace animation.</p>
+        </div>
+      </a>
+
+      <a class="portfolio-card reveal-up" href="#" target="_blank" rel="noopener noreferrer" style="--delay:260ms">
+        <div class="portfolio-card__img-wrap">
+          <img src="images/family-hub-funzone.png" alt="Family Hub Fun Zone — gamified math arcade with real prizes" class="portfolio-card__img" loading="lazy">
+          <div class="portfolio-card__overlay">
+            <span class="portfolio-card__cta">View project <i class="ph ph-arrow-up-right" aria-hidden="true"></i></span>
+          </div>
+        </div>
+        <div class="portfolio-card__meta">
+          <span class="portfolio-card__tag">Web App · Gamified · Interactive</span>
+          <h3 class="portfolio-card__title">Family Hub — Fun Zone</h3>
+          <p class="portfolio-card__desc">A fully separate gamified math arcade built inside the same app. Completely different visual identity — neon, starfield, prize-driven.</p>
+        </div>
+      </a>
 
     </div>
   </div>
@@ -355,7 +425,9 @@
   <div class="section-inner">
     <div class="contact__header reveal-up">
       <p class="section-eyebrow">Get started</p>
-      <h2 class="section-title" id="contact-title">Let's build something great.</h2>
+      <div class="title-reveal">
+        <h2 class="section-title" id="contact-title">Let's build something great.</h2>
+      </div>
       <p class="section-sub">Tell Charles about your business and what your website needs to do.</p>
     </div>
     <div class="contact__layout">
