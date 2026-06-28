@@ -152,7 +152,7 @@
 
       var action = form.getAttribute('action');
       if (action.indexOf('REPLACE_WITH_YOUR_FORM_ID') !== -1) {
-        statusEl.textContent = 'Form not yet configured — contact temptestbspivey@gmail.com directly.';
+        statusEl.textContent = 'Form not yet configured — contact charles@mambahire.com directly.';
         statusEl.className = 'form-status error';
         return;
       }
@@ -181,7 +181,7 @@
           }
         })
         .catch(function (err) {
-          statusEl.textContent = err.message || 'Something went wrong. Email directly: temptestbspivey@gmail.com';
+          statusEl.textContent = err.message || 'Something went wrong. Email directly: charles@mambahire.com';
           statusEl.className = 'form-status error';
           if (btnLabel) btnLabel.textContent = 'Send message';
           submitBtn.disabled = false;

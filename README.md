@@ -2,7 +2,7 @@
 
 **Live site:** https://cptcool-source.github.io/design-site  
 **Owner:** Charles Spivey · fixedIT Tech · North Port, FL 34291  
-**Contact:** temptestbspivey@gmail.com
+**Contact:** charles@mambahire.com
 
 ---
 
