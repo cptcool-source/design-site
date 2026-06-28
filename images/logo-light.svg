@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 68" width="420" height="68" role="img" aria-label="fixedIT Tech">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800&amp;display=swap');
+      .wm {
+        font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 56px;
+        letter-spacing: -0.04em;
+      }
+    </style>
+  </defs>
+  <!-- Wordmark: "fixediT" near-black, " Tech" coral — for light/white backgrounds -->
+  <text class="wm" x="0" y="54">
+    <tspan fill="#111111">fixediT</tspan><tspan fill="#E05C3A"> Tech</tspan>
+  </text>
+</svg>

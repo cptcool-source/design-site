@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="a">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,21 +19,15 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <link rel="canonical" href="https://fixedittech.com">
-  <meta name="theme-color" content="#09091F">
+  <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
 
-  <!-- ── Fonts: all three directions preloaded ───────────────────────────── -->
+  <!-- ── Fonts: Outfit (variable weight) + Geist Mono (utility) ─────────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Direction A: Cormorant Garamond + DM Sans -->
-  <!-- Direction C: Bricolage Grotesque (variable) + Inter -->
-  <!-- Shared: Geist Mono -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@400;500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Direction B: Clash Display + General Sans (Fontshare) -->
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css">
@@ -71,11 +65,13 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <!-- ── Navigation ──────────────────────────────────────────────────────────── -->
 <header class="site-nav" id="site-nav">
   <div class="nav-inner">
     <a href="#home" class="nav-logo" aria-label="fixedIT Tech home">
-      fixedIT<span class="logo-accent">Tech</span>
+      fixediT<span class="logo-accent"> Tech</span>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#services" class="nav-link">Services</a>
@@ -84,7 +80,7 @@
       <a href="#about"    class="nav-link">About</a>
       <a href="#contact"  class="nav-link">Contact</a>
     </nav>
-    <a href="#contact" class="btn btn--nav-cta">Get a quote</a>
+    <a href="#contact" class="btn btn--nav-cta">Get a free quote</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -102,7 +98,7 @@
   </nav>
 </div>
 
-<main>
+<main id="main-content">
 
 <!-- ── Hero ────────────────────────────────────────────────────────────────── -->
 <section class="hero" id="home" aria-label="Welcome to fixedIT Tech">
@@ -139,36 +135,15 @@
       <a href="#work"    class="btn btn--ghost">See our work</a>
     </div>
 
-    <div class="scroll-hint" aria-hidden="true">
-      <span class="scroll-line"></span>
-    </div>
   </div>
 
 </section>
 
-<!-- ── Marquee ──────────────────────────────────────────────────────────────── -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee__track">
-    <span class="marquee__item">North Port</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Southwest FL</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Venice</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Englewood</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Port Charlotte</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Restaurants</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Home Services</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Health &amp; Wellness</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Real Estate</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Contractors</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">North Port</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Southwest FL</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Venice</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Englewood</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Port Charlotte</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Restaurants</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Home Services</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Health &amp; Wellness</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Real Estate</span><span class="marquee__sep">·</span>
-    <span class="marquee__item">Contractors</span><span class="marquee__sep">·</span>
+<!-- ── Film Slate ─────────────────────────────────────────────────────────────── -->
+<div class="film-slate" aria-hidden="true">
+  <div class="film-slate__track">
+    <span class="film-slate__text">fixedIT Tech &nbsp;·&nbsp; North Port, FL 34291 &nbsp;·&nbsp; Custom web design for Southwest Florida businesses &nbsp;·&nbsp; Restaurants &nbsp;·&nbsp; Home Services &nbsp;·&nbsp; Health &amp; Wellness &nbsp;·&nbsp; Real Estate &nbsp;·&nbsp; Contractors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <span class="film-slate__text" aria-hidden="true">fixedIT Tech &nbsp;·&nbsp; North Port, FL 34291 &nbsp;·&nbsp; Custom web design for Southwest Florida businesses &nbsp;·&nbsp; Restaurants &nbsp;·&nbsp; Home Services &nbsp;·&nbsp; Health &amp; Wellness &nbsp;·&nbsp; Real Estate &nbsp;·&nbsp; Contractors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
   </div>
 </div>
 
@@ -176,16 +151,15 @@
 <section class="services" id="services" aria-labelledby="services-title">
   <div class="section-inner">
     <div class="section-header reveal-up">
-      <p class="section-eyebrow">What we do</p>
       <div class="title-reveal">
         <h2 class="section-title" id="services-title">Everything your site needs to win.</h2>
       </div>
-      <p class="section-sub">From first impression to first call — we handle the full stack.</p>
+      <p class="section-sub">From first impression to first call. We handle the full stack.</p>
     </div>
     <div class="services-grid services-grid--asymmetric">
 
       <!-- Featured: Web Design — spans 2 columns -->
-      <article class="svc-card svc-card--featured reveal-up" style="--card-color:#6366F1;--delay:0ms">
+      <article class="svc-card svc-card--featured reveal-up" style="--delay:0ms">
         <div class="svc-card__icon-wrap">
           <i class="ph-duotone ph-layout" aria-hidden="true" style="--ph-duotone-opacity:.25"></i>
         </div>
@@ -200,7 +174,7 @@
         </div>
       </article>
 
-      <article class="svc-card reveal-up" style="--card-color:#818CF8;--delay:80ms">
+      <article class="svc-card reveal-up" style="--delay:80ms">
         <div class="svc-card__icon-wrap">
           <i class="ph-duotone ph-code" aria-hidden="true" style="--ph-duotone-opacity:.25"></i>
         </div>
@@ -208,7 +182,7 @@
         <p class="svc-card__desc">Fast, secure, mobile-first code built from scratch — with speed scores that actually move the needle for SEO.</p>
       </article>
 
-      <article class="svc-card reveal-up" style="--card-color:#F59E0B;--delay:0ms">
+      <article class="svc-card reveal-up" style="--delay:0ms">
         <div class="svc-card__icon-wrap">
           <i class="ph-duotone ph-trend-up" aria-hidden="true" style="--ph-duotone-opacity:.25"></i>
         </div>
@@ -216,7 +190,7 @@
         <p class="svc-card__desc">Show up first when customers in North Port and Southwest Florida search for your service — before your competition does.</p>
       </article>
 
-      <article class="svc-card reveal-up" style="--card-color:#34D399;--delay:80ms">
+      <article class="svc-card reveal-up" style="--delay:80ms">
         <div class="svc-card__icon-wrap">
           <i class="ph-duotone ph-map-pin" aria-hidden="true" style="--ph-duotone-opacity:.25"></i>
         </div>
@@ -224,7 +198,7 @@
         <p class="svc-card__desc">We set up and optimize your listing so customers find you on Maps, read your reviews, and call directly from search.</p>
       </article>
 
-      <article class="svc-card reveal-up" style="--card-color:#F472B6;--delay:160ms">
+      <article class="svc-card reveal-up" style="--delay:160ms">
         <div class="svc-card__icon-wrap">
           <i class="ph-duotone ph-share-network" aria-hidden="true" style="--ph-duotone-opacity:.25"></i>
         </div>
@@ -233,7 +207,7 @@
       </article>
 
       <!-- Wide: Maintenance — spans full width -->
-      <article class="svc-card svc-card--wide reveal-up" style="--card-color:#6366F1;--delay:200ms">
+      <article class="svc-card svc-card--wide reveal-up" style="--delay:200ms">
         <div class="svc-card__icon-wrap">
           <i class="ph-duotone ph-shield-check" aria-hidden="true" style="--ph-duotone-opacity:.25"></i>
         </div>
@@ -267,7 +241,7 @@
           <div class="step__body">
             <span class="step__num" aria-hidden="true">01</span>
             <h3 class="step__title">Consult</h3>
-            <p class="step__desc">We talk about your business, your customers, and what success looks like. No intake forms — a real conversation.</p>
+            <p class="step__desc">We talk about your business, your customers, and what success looks like. No intake forms. A real conversation.</p>
           </div>
         </li>
         <li class="process__step">
@@ -275,7 +249,7 @@
           <div class="step__body">
             <span class="step__num" aria-hidden="true">02</span>
             <h3 class="step__title">Design</h3>
-            <p class="step__desc">A custom mockup built around your brand and your customers — not a theme we found in a directory.</p>
+            <p class="step__desc">A custom mockup built around your brand and your customers. Not a theme from a directory.</p>
           </div>
         </li>
         <li class="process__step">
@@ -291,7 +265,7 @@
           <div class="step__body">
             <span class="step__num" aria-hidden="true">04</span>
             <h3 class="step__title">Launch</h3>
-            <p class="step__desc">We handle deployment, domain setup, and Google indexing — then hand you the keys with a walkthrough.</p>
+            <p class="step__desc">We handle deployment, domain setup, and Google indexing. You get the keys and a full walkthrough.</p>
           </div>
         </li>
       </ol>
@@ -303,41 +277,40 @@
 <section class="work" id="work" aria-labelledby="work-title">
   <div class="section-inner">
     <div class="section-header reveal-up">
-      <p class="section-eyebrow">Who we serve</p>
       <div class="title-reveal">
         <h2 class="section-title" id="work-title">Built for the businesses that keep Southwest Florida running.</h2>
       </div>
     </div>
     <div class="work-grid">
 
-      <div class="work-card reveal-up" style="--card-color:#F59E0B;--delay:0ms">
+      <div class="work-card reveal-up" style="--delay:0ms">
         <div class="work-card__icon" aria-hidden="true">
           <i class="ph-duotone ph-fork-knife" style="--ph-duotone-opacity:.2"></i>
         </div>
         <p class="work-card__eyebrow">Restaurants &amp; Food</p>
         <h3 class="work-card__title">Sites that fill tables.</h3>
         <p class="work-card__desc">Online menus, booking integrations, and local search presence that turn searchers into seated guests — before they choose the place down the street.</p>
-        <a href="#contact" class="work-card__link">Start a project <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        <a href="#contact" class="work-card__link">Get a free quote <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       </div>
 
-      <div class="work-card reveal-up" style="--card-color:#2DD4BF;--delay:100ms">
+      <div class="work-card reveal-up" style="--delay:100ms">
         <div class="work-card__icon" aria-hidden="true">
           <i class="ph-duotone ph-wrench" style="--ph-duotone-opacity:.2"></i>
         </div>
         <p class="work-card__eyebrow">Home Services &amp; Trades</p>
         <h3 class="work-card__title">Sites that book jobs.</h3>
         <p class="work-card__desc">Service area pages, review integration, and quote request forms built for HVAC, plumbing, roofing, and contractors across Southwest Florida.</p>
-        <a href="#contact" class="work-card__link">Start a project <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        <a href="#contact" class="work-card__link">Get a free quote <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       </div>
 
-      <div class="work-card reveal-up" style="--card-color:#F472B6;--delay:200ms">
+      <div class="work-card reveal-up" style="--delay:200ms">
         <div class="work-card__icon" aria-hidden="true">
           <i class="ph-duotone ph-heartbeat" style="--ph-duotone-opacity:.2"></i>
         </div>
         <p class="work-card__eyebrow">Health &amp; Professional</p>
         <h3 class="work-card__title">Sites that build trust.</h3>
         <p class="work-card__desc">Clean, credentialed web presence for chiropractors, wellness providers, real estate agents, and attorneys who can't afford to look amateur online.</p>
-        <a href="#contact" class="work-card__link">Start a project <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        <a href="#contact" class="work-card__link">Get a free quote <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       </div>
 
     </div>
@@ -349,62 +322,64 @@
       <span class="portfolio-divider__rule" aria-hidden="true"></span>
     </div>
 
-    <div class="portfolio-grid">
+    <div class="portfolio-rail-wrap">
+      <div class="portfolio-rail" id="portfolio-rail">
 
-      <div class="portfolio-card reveal-up" role="button" tabindex="0"
-           aria-label="Enlarge screenshot: Mamba Tech Solutions"
-           data-lightbox-src="images/mamba-tech.png"
-           data-lightbox-alt="Mamba Tech Solutions — Microsoft Teams phone infrastructure for trade businesses"
-           style="--delay:0ms">
-        <div class="portfolio-card__img-wrap">
-          <img src="images/mamba-tech.png" alt="Mamba Tech Solutions — Microsoft Teams phone infrastructure for trade businesses" class="portfolio-card__img" loading="lazy">
-          <div class="portfolio-card__overlay">
-            <span class="portfolio-card__cta"><i class="ph ph-magnifying-glass-plus" aria-hidden="true"></i></span>
+        <div class="portfolio-card reveal-up" role="button" tabindex="0"
+             aria-label="Enlarge screenshot: Mamba Tech Solutions"
+             data-lightbox-src="images/mamba-tech.png"
+             data-lightbox-alt="Mamba Tech Solutions — Microsoft Teams phone infrastructure for trade businesses"
+             style="--delay:0ms">
+          <div class="portfolio-card__img-wrap">
+            <img src="images/mamba-tech.png" alt="Mamba Tech Solutions — Microsoft Teams phone infrastructure for trade businesses" class="portfolio-card__img" loading="lazy">
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__cta"><i class="ph ph-magnifying-glass-plus" aria-hidden="true"></i></span>
+            </div>
+          </div>
+          <div class="portfolio-card__meta">
+            <span class="portfolio-card__tag">B2B · Telecom · Conversion</span>
+            <h3 class="portfolio-card__title">Mamba Tech Solutions</h3>
+            <p class="portfolio-card__desc">Communications infrastructure for home service businesses. Clean, conversion-focused, with a live dispatch board in the hero.</p>
           </div>
         </div>
-        <div class="portfolio-card__meta">
-          <span class="portfolio-card__tag">B2B · Telecom · Conversion</span>
-          <h3 class="portfolio-card__title">Mamba Tech Solutions</h3>
-          <p class="portfolio-card__desc">Communications infrastructure for home service businesses. Clean, conversion-focused, with a live dispatch board in the hero.</p>
-        </div>
-      </div>
 
-      <div class="portfolio-card reveal-up" role="button" tabindex="0"
-           aria-label="Enlarge screenshot: Family Hub"
-           data-lightbox-src="images/family-hub-home.png"
-           data-lightbox-alt="Family Hub — dark themed private family app with circuit animation"
-           style="--delay:130ms">
-        <div class="portfolio-card__img-wrap">
-          <img src="images/family-hub-home.png" alt="Family Hub — dark themed private family app with circuit animation" class="portfolio-card__img" loading="lazy">
-          <div class="portfolio-card__overlay">
-            <span class="portfolio-card__cta"><i class="ph ph-magnifying-glass-plus" aria-hidden="true"></i></span>
+        <div class="portfolio-card reveal-up" role="button" tabindex="0"
+             aria-label="Enlarge screenshot: Family Hub"
+             data-lightbox-src="images/family-hub-home.png"
+             data-lightbox-alt="Family Hub — dark themed private family app with circuit animation"
+             style="--delay:130ms">
+          <div class="portfolio-card__img-wrap">
+            <img src="images/family-hub-home.png" alt="Family Hub — dark themed private family app with circuit animation" class="portfolio-card__img" loading="lazy">
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__cta"><i class="ph ph-magnifying-glass-plus" aria-hidden="true"></i></span>
+            </div>
+          </div>
+          <div class="portfolio-card__meta">
+            <span class="portfolio-card__tag">Web App · Dark UI · Immersive</span>
+            <h3 class="portfolio-card__title">Family Hub</h3>
+            <p class="portfolio-card__desc">A private family command center — chores, shared calendar, memories, and an AI study tutor. Dark, immersive UI with circuit trace animation.</p>
           </div>
         </div>
-        <div class="portfolio-card__meta">
-          <span class="portfolio-card__tag">Web App · Dark UI · Immersive</span>
-          <h3 class="portfolio-card__title">Family Hub</h3>
-          <p class="portfolio-card__desc">A private family command center — chores, shared calendar, memories, and an AI study tutor. Dark, immersive UI with circuit trace animation.</p>
-        </div>
-      </div>
 
-      <div class="portfolio-card reveal-up" role="button" tabindex="0"
-           aria-label="Enlarge screenshot: Family Hub Fun Zone"
-           data-lightbox-src="images/family-hub-funzone.png"
-           data-lightbox-alt="Family Hub Fun Zone — gamified math arcade with real prizes"
-           style="--delay:260ms">
-        <div class="portfolio-card__img-wrap">
-          <img src="images/family-hub-funzone.png" alt="Family Hub Fun Zone — gamified math arcade with real prizes" class="portfolio-card__img" loading="lazy">
-          <div class="portfolio-card__overlay">
-            <span class="portfolio-card__cta"><i class="ph ph-magnifying-glass-plus" aria-hidden="true"></i></span>
+        <div class="portfolio-card reveal-up" role="button" tabindex="0"
+             aria-label="Enlarge screenshot: Family Hub Fun Zone"
+             data-lightbox-src="images/family-hub-funzone.png"
+             data-lightbox-alt="Family Hub Fun Zone — gamified math arcade with real prizes"
+             style="--delay:260ms">
+          <div class="portfolio-card__img-wrap">
+            <img src="images/family-hub-funzone.png" alt="Family Hub Fun Zone — gamified math arcade with real prizes" class="portfolio-card__img" loading="lazy">
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__cta"><i class="ph ph-magnifying-glass-plus" aria-hidden="true"></i></span>
+            </div>
+          </div>
+          <div class="portfolio-card__meta">
+            <span class="portfolio-card__tag">Web App · Gamified · Interactive</span>
+            <h3 class="portfolio-card__title">Family Hub — Fun Zone</h3>
+            <p class="portfolio-card__desc">A fully separate gamified math arcade built inside the same app. Completely different visual identity — neon, starfield, prize-driven.</p>
           </div>
         </div>
-        <div class="portfolio-card__meta">
-          <span class="portfolio-card__tag">Web App · Gamified · Interactive</span>
-          <h3 class="portfolio-card__title">Family Hub — Fun Zone</h3>
-          <p class="portfolio-card__desc">A fully separate gamified math arcade built inside the same app. Completely different visual identity — neon, starfield, prize-driven.</p>
-        </div>
-      </div>
 
+      </div>
     </div>
   </div>
 </section>
@@ -413,12 +388,11 @@
 <section class="about" id="about" aria-labelledby="about-title">
   <div class="section-inner about__inner">
     <div class="about__content reveal-up">
-      <p class="section-eyebrow">About fixedIT Tech</p>
       <h2 class="section-title" id="about-title">Built <em class="accent">here.</em><br>Designed to compete.</h2>
       <blockquote class="about__quote">
         Design without strategy is decoration.<br>Strategy without design is invisible.
       </blockquote>
-      <p class="about__body">We started fixedIT Tech in North Port, FL because local businesses deserve websites that actually work. We know the <em class="accent">Southwest Florida</em> market because we live in it — and we know that your next customer is one Google search away from choosing your competitor instead.</p>
+      <p class="about__body">We started fixedIT Tech in North Port, FL because local businesses deserve websites that actually work. We know the <em class="accent">Southwest Florida</em> market because we live in it. Your next customer is one Google search away from choosing your competitor instead.</p>
       <p class="about__body">Every site we build is a custom system designed for your customers, your industry, and your zip code. Not a theme. Not a subscription builder. A real website that leads.</p>
       <a href="mailto:temptestbspivey@gmail.com" class="about__email">
         <i class="ph-duotone ph-envelope-simple" aria-hidden="true" style="--ph-duotone-opacity:.25"></i>
@@ -449,7 +423,6 @@
 <section class="contact" id="contact" aria-labelledby="contact-title">
   <div class="section-inner">
     <div class="contact__header reveal-up">
-      <p class="section-eyebrow">Get started</p>
       <div class="title-reveal">
         <h2 class="section-title" id="contact-title">Let's build something great.</h2>
       </div>
@@ -473,11 +446,13 @@
         <div class="form-row form-row--2">
           <div class="form-group">
             <label for="cf-name">Your name</label>
-            <input type="text" id="cf-name" name="name" placeholder="Jane Smith" required autocomplete="name">
+            <input type="text" id="cf-name" name="name" placeholder="Maria Torres" required autocomplete="name">
+            <span class="field-error" id="cf-name-err" role="alert" aria-live="polite"></span>
           </div>
           <div class="form-group">
             <label for="cf-email">Email address</label>
-            <input type="email" id="cf-email" name="email" placeholder="jane@yourbusiness.com" required autocomplete="email">
+            <input type="email" id="cf-email" name="email" placeholder="you@yourbusiness.com" required autocomplete="email">
+            <span class="field-error" id="cf-email-err" role="alert" aria-live="polite"></span>
           </div>
         </div>
 
@@ -540,7 +515,7 @@
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <span class="footer-logo">fixedIT<span class="logo-accent">Tech</span></span>
+    <span class="footer-logo">fixediT<span class="logo-accent"> Tech</span></span>
     <span class="footer-copy">&copy; 2026 Charles Spivey &nbsp;·&nbsp; North Port, FL 34291</span>
     <a href="mailto:temptestbspivey@gmail.com" class="footer-email">temptestbspivey@gmail.com</a>
   </div>
