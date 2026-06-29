@@ -1,5 +1,5 @@
 /* ==========================================================================
-   fixedIT Tech — Design System
+   chuck design — Design System
    Direction C: Outfit (variable weight) · Geist Mono (utility) · Phosphor
    Palette: #FAFAF8 base · #111111 text · #E05C3A coral accent · dark hero
    ========================================================================== */
@@ -67,6 +67,9 @@ body::after {
   font-weight: 800;
   font-size: 18px;
   letter-spacing: -0.03em;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
 }
 .hero-title {
   font-family: 'Outfit', system-ui, sans-serif;
@@ -238,7 +241,7 @@ body::after {
 .nav-logo:hover { color: #fff; }
 .site-nav.scrolled .nav-logo { color: var(--text); }
 .site-nav.scrolled .nav-logo:hover { color: var(--accent); }
-.logo-accent { color: var(--accent); }
+.logo-accent { color: var(--accent); font-weight: 300; font-style: italic; letter-spacing: -0.01em; }
 
 /* Nav links */
 .nav-links { display: flex; align-items: center; gap: 2px; margin-left: auto; }
@@ -763,7 +766,7 @@ body::after {
   max-width: var(--max-w); margin: 0 auto;
   display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
 }
-.footer-logo { font-weight: 800; font-size: 15px; letter-spacing: -0.02em; color: var(--text); }
+.footer-logo { font-weight: 800; font-size: 15px; letter-spacing: -0.02em; color: var(--text); display: inline-flex; flex-direction: column; line-height: 1; }
 .footer-copy { font-size: 12px; color: var(--text-faint); margin-right: auto; }
 .footer-email { font-size: 12px; color: var(--text-faint); transition: color 0.2s; }
 .footer-email:hover { color: var(--accent); }

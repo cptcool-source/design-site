@@ -1,14 +1,14 @@
-# fixedIT Tech — Marketing Website
+# chuck design — Marketing Website
 
 **Live site:** https://cptcool-source.github.io/design-site  
-**Owner:** Charles Spivey · fixedIT Tech · North Port, FL 34291  
-**Contact:** charles@mambahire.com
+**Owner:** Charles Spivey · chuck design · North Port, FL 34291  
+**Contact:** charles@chuckdesign.com
 
 ---
 
 ## Project
 
-A marketing website for fixedIT Tech, a web design business serving small businesses across Southwest Florida. The site's dual purpose: attract local clients through search and demonstrate the level of design quality Charles delivers.
+A marketing website for chuck design, a web design business serving small businesses across Southwest Florida. The site's dual purpose: attract local clients through search and demonstrate the level of design quality Charles delivers.
 
 **Services promoted:** Web Design · Web Development · SEO · Google Business Profile · Social Media Setup · Website Maintenance
 
@@ -34,7 +34,7 @@ Pure HTML / CSS / JS — no framework, no build step. GitHub Pages ready out of 
 
 - [ ] **Formspree** — sign up at formspree.io, create a form, replace `REPLACE_WITH_YOUR_FORM_ID` in `index.html` line ~370
 - [ ] **GitHub Pages** — repo Settings → Pages → Source: `main` / `/ (root)` → Save
-- [ ] **Custom domain** — Pages → Custom domain → enter `fixedittech.com`, then set DNS A records to GitHub's IPs and add a CNAME for `www`
+- [ ] **Custom domain** — Pages → Custom domain → enter `chuckdesign.com`, then set DNS A records to GitHub's IPs and add a CNAME for `www`
 
 ---
 
@@ -89,9 +89,9 @@ A theme switcher widget (bottom-right corner, **remove before going live**) lets
 
 ### Brand Concept
 
-fixedIT Tech is not an agency. It is a skilled local operator who builds things that work. The visual identity reflects that: confidence without posturing, precision without coldness, warmth earned through restraint rather than decoration.
+chuck design is not an agency. It is a skilled local operator who builds things that work. The visual identity reflects that: confidence without posturing, precision without coldness, warmth earned through restraint rather than decoration.
 
-**Core metaphor:** Precision craft meets Gulf Coast light. The weight contrast in the logo — "fixedIT" at 800, "Tech" in coral — is the whole brand idea in two words: authority, then warmth.
+**Core metaphor:** Precision craft meets Gulf Coast light. The weight contrast in the logo — "chuck" at 800, "design" in coral italic 300 — is the whole brand idea in two words: authority, then warmth.
 
 **What the design avoids:** Dark-mode SaaS clichés. Generic beach imagery. Luxury signaling that would alienate a plumber or restaurant owner. Anything that says "startup" instead of "professional."
 
@@ -248,23 +248,20 @@ The site's visual language calls for images that feel like **warm precision** �
 
 ## Logo System
 
-**Logo Direction:** Pixel Wordmark — "fixediT Tech" in Outfit Extra Bold. "Tech" rendered in coral (#E05C3A). The lowercase **i** dot is stylized as a filled square pixel — a craft signal readable at display scale that ties the wordmark to the precision-craft brand positioning.
+**Logo Direction:** Direction 1 — Weight Contrast Wordmark. "chuck" in Outfit Extra Bold (800), "design" in Outfit Light Italic (300) coral. The weight tension between the two words IS the brand idea — same system as the hero headline. The `cd` monogram (c off-white, d coral) serves as the favicon/icon mark.
 
-**Figma source file:** `fixedIT Tech — Logo System` (file key: `JMccvYFJyxryBSMJZTO61m`)  
-Contains: primary dark/light wordmarks, one-color variants, scale tests (64→13px), fT favicon marks, OG image layout, color palette, type specimens.
+**Concept boards:** `brand-concepts.html` (local preview — remove before deploying) shows all three explored directions.
 
 **On-site logo files:**
 
 | File | Use | Background |
 |---|---|---|
-| `images/favicon.svg` | Browser tab, bookmarks | — (32×32 SVG) |
+| `images/favicon.svg` | Browser tab, bookmarks | — (512×512 SVG, cd monogram) |
 | `images/logo-dark.svg` | Docs, decks, email signatures | Dark / #111 |
 | `images/logo-light.svg` | Docs, decks, print | Light / white |
 | `images/og-image.html` | Social preview source (screenshot at 1200×630) | — |
 
-**Nav and footer logo** are CSS text (`fixediT<span> Tech</span>`) so Outfit 800 renders live on the page — no image swaps.
-
-**Pixel i-dot implementation:** The square i-dot is a vector editing detail — apply in Figma by overlaying a filled rect at each "i" character's dot position. The logo SVG files use live SVG text (Outfit 800 via Google Fonts import) and render correctly in modern browsers. For print or rasterized exports, apply the pixel dot in the Figma source file and export as PNG/PDF.
+**Nav and footer logo** are CSS text (`chuck<span> design</span>`) rendered live via Outfit variable weight. The `.nav-logo` and `.footer-logo` flex column creates the two-line stacked lockup. The `.logo-accent` class sets the coral italic 300 style on "design".
 
 ---
 
@@ -296,6 +293,6 @@ design-site/
 
 - Schema.org `LocalBusiness` JSON-LD in `<head>`
 - Geo meta tags: `geo.region`, `geo.placename`, `geo.position`, `ICBM`
-- Canonical URL: `https://fixedittech.com`
+- Canonical URL: `https://chuckdesign.com`
 - Copy targets: North Port · Venice · Englewood · Port Charlotte · Osprey · Southwest Florida
 - Zip code 34291 mentioned in copy and meta

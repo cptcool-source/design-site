@@ -1,17 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 68" width="420" height="68" role="img" aria-label="fixedIT Tech">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 112" width="210" height="112" role="img" aria-label="chuck design">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800&amp;display=swap');
-      .wm {
-        font-family: 'Outfit', system-ui, -apple-system, sans-serif;
-        font-weight: 800;
-        font-size: 56px;
-        letter-spacing: -0.04em;
-      }
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:ital,wght@0,800;1,300&amp;display=swap');
+      .wm-name { font-family: 'Outfit', system-ui, sans-serif; font-weight: 800; font-size: 56px; letter-spacing: -0.04em; }
+      .wm-word { font-family: 'Outfit', system-ui, sans-serif; font-weight: 300; font-style: italic; font-size: 56px; letter-spacing: -0.02em; }
     </style>
   </defs>
-  <!-- Wordmark: "fixediT" near-black, " Tech" coral — for light/white backgrounds -->
-  <text class="wm" x="0" y="54">
-    <tspan fill="#111111">fixediT</tspan><tspan fill="#E05C3A"> Tech</tspan>
-  </text>
+  <text class="wm-name" x="0" y="54" fill="#111111">chuck</text>
+  <text class="wm-word" x="0" y="102" fill="#E05C3A">design</text>
 </svg>
